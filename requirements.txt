@@ -1,0 +1,8 @@
+pyarabic
+camel-tools
+numpy
+scipy
+pandas
+scikit-learn
+torch
+contractions
