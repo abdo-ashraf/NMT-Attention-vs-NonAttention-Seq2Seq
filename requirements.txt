@@ -2,6 +2,7 @@ pyarabic
 camel-tools
 numpy
 scipy
+spacy
 pandas
 scikit-learn
 torch
