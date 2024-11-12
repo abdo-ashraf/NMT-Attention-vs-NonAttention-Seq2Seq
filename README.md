@@ -4,4 +4,4 @@
 - how are you? : كيف حالك ؟
 - he is a good boy. : انه فتاة جيدة
 - she is a good girl. : انها فتاة صالحة
-- who is a better? : من افضل ؟
+- Who is better than me?! : من افضل مني ؟
