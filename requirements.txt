@@ -1,5 +1,4 @@
-pyarabic
-camel-tools
-spacy
 torch
+spacy
+pyarabic
 contractions
