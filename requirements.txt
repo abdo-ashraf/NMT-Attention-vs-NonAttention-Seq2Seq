@@ -1,8 +1,5 @@
 pyarabic
 camel-tools
-numpy
-scipy
-pandas
-scikit-learn
+spacy
 torch
 contractions
