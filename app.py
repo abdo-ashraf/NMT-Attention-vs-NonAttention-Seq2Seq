@@ -1,3 +1,25 @@
+import subprocess
+import sys
+import os
+
+## Turn around camel-kenlm wheel error
+def install_packages():
+    # Install regular packages
+    packages = [
+        "future", "six", "docopt", "cachetools", "numpy", "scipy", "pandas",
+        "scikit-learn", "torch", "transformers", "editdistance", "requests",
+        "emoji", "pyrsistent", "muddler"
+    ]
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-q"] + packages)
+
+    # Install camel-tools without dependencies
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "camel-tools", "--no-deps"])
+
+# Run the install function
+install_packages()
+
+os.system('python -m spacy download en_core_web_sm')
+
 import torch
 import utils
 from utils import camel_tokenizer, spacy_tokenizer
@@ -39,9 +61,9 @@ with gr.Blocks(css=custom_css) as demo:
     with gr.Row():
         with gr.Column():
             input_text = gr.Textbox(label='English Sentence')
-            gr.Examples(['how are you?',
-                         'she is a good girl.',
-                         'who is a better?'],
+            gr.Examples(['How are you?',
+                         'She is a good girl.',
+                         'Who is better than me?!'],
                         inputs=input_text, label="Examples: ")
         with gr.Column():
             output = gr.Textbox(label="Arabic Translation")
